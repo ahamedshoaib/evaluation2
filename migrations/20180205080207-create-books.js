@@ -2,13 +2,14 @@
 
 module.exports = {
   up: (queryInterface, Sequelize) => queryInterface.createTable('books', {
-    Author: {
-      type: Sequelize.STRING,
-    },
     id: {
       allowNull: false,
+      autoIncrement: true,
       primaryKey: true,
       type: Sequelize.INTEGER,
+    },
+    Author: {
+      type: Sequelize.STRING,
     },
     Name: {
       type: Sequelize.STRING,
